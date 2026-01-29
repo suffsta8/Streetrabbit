@@ -153,8 +153,8 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-900">
-        <div className="container flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-3 animate-fade-in">
+        <div className="container relative flex items-center h-16 md:h-20">
+          <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center gap-3 animate-fade-in">
             <img
               src="/images/logo-rabbit.png"
               alt="Street Rabbit Logo"
@@ -162,7 +162,8 @@ export default function Home() {
             />
             <span className="text-lg font-bold tracking-wider animate-slide-in-left"></span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 ml-auto">
+
             <a
               href="#services"
               className="text-sm tracking-wide hover:text-pink-600 transition-colors duration-300"
@@ -490,10 +491,20 @@ export default function Home() {
           Let's collaborate on your next project. We work with brands and creators
           who demand excellence.
         </p>
-       <button className="btn-primary premium-hover rounded-full px-8 py-4" >
-          Get In Touch
-          <ChevronRight className="inline ml-2 w-4 h-4" />
-        </button>
+       <button
+  onClick={() => {
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="group inline-flex items-center gap-3 rounded-full bg-pink-600 px-10 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-pink-500 hover:scale-105 active:scale-95"
+>
+  Get In Touch
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</button>
+
       </div>
     </div>
   </div>
@@ -559,54 +570,34 @@ export default function Home() {
         </div>
       </div>
 
-  <form
-  name="contact"
-  method="POST"
-  action="/thank-you"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  className={`space-y-6 ${getSectionAnimation("contact")}`}
->
-  {/* Netlify required hidden input */}
-  <input type="hidden" name="form-name" value="contact" />
+      {/* RIGHT FORM */}
+      <div className={`space-y-6 ${getSectionAnimation("contact")}`}>
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+        />
 
-  {/* Honeypot */}
-  <input type="hidden" name="bot-field" />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+        />
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
-  />
+        <textarea
+          placeholder="Your Message"
+          rows={5}
+          className="w-full px-6 py-4 min-h-[160px] rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300 resize-none"
+        />
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
-  />
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-6" />
 
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    rows={5}
-    required
-    className="w-full px-6 py-4 min-h-[160px] rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300 resize-none"
-  />
-
-  <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-6" />
-
-  <button
-    type="submit"
-    className="w-full py-4 rounded-xl bg-pink-600 text-white font-semibold tracking-wide hover:bg-pink-500 hover:shadow-[0_0_40px_rgba(255,20,147,0.45)] active:scale-[0.98] transition-all duration-300"
-  >
-    Send Message
-  </button>
-</form>
-
+        <button
+          className="w-full py-4 rounded-xl bg-pink-600 text-white font-semibold tracking-wide hover:bg-pink-500 hover:shadow-[0_0_40px_rgba(255,20,147,0.45)] active:scale-[0.98] transition-all duration-300"
+        >
+          Send Message
+        </button>
+      </div>
     </div>
   </div>
 </section>
