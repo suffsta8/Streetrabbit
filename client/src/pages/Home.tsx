@@ -1,3 +1,14 @@
+{/* Netlify Form Detection */}
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  hidden
+>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+</form>
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
