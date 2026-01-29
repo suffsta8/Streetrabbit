@@ -465,7 +465,7 @@ export default function Home() {
   src="/images/logobottom1.png"
   alt="Street Rabbit"
   className="
-    absolute top-50 right-50
+    absolute top-35 right-25
     w-50 h-50
     opacity-80
     animate-float
