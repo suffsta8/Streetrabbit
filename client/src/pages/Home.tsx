@@ -38,50 +38,50 @@ export default function Home() {
   const portfolioItems = [
     {
       id: 1,
-      title: "Brand Identity",
+      title: "Raven",
       image: "/images/portfolio-video-editing.jpg",
       description: "Understand brand identity, research competitors, and sketch concepts on paper.",
     },
     {
       id: 2,
-      title: "Illustration",
+      title: "Cranium",
       image: "/images/portfolio-illustration.jpg",
       description: "Hand-crafted visual narratives",
     },
     {
       id: 3,
-      title: "Graphic Design",
+      title: "Illustrations",
       image: "/images/portfolio-design.jpg",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
-      title: "Web Design",
+      title: "Posts",
       image: "/images/portfolio-websites.jpg",
       description: "Digital experiences that captivate",
     },
      {
       id: 4,
-      title: "babw",
+      title: "Thumbnail",
       image: "/images/LAHORE1.jpg",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
-      title: "babw",
-      image: "/images/portfolio-design.jpg",
+      title: "Movie Posters",
+      image: "/images/POSTER.jpg",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
-      title: "babw",
-      image: "/images/portfolio-design.jpg",
+      title: "Poster",
+      image: "/images/SAPAT.jpg",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
-      title: "babw",
-      image: "/images/portfolio-design.jpg",
+      title: "UX UI",
+      image: "/images/goldbeach.jpg",
       description: "Bold visual identities and layouts",
     },
   ];
@@ -256,8 +256,8 @@ export default function Home() {
               <div className="geometric-divider mb-8" />
               <h2 className="mb-6">Muhammad Sufian</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Street Rabbit Studio is a collective of bold creatives dedicated to pushing boundaries. We don't follow
-                trends—we set them. Every project is an opportunity to create something extraordinary.
+                I’m a creative who pushes boundaries and trusts instinct over trends. 
+                I see every project as a chance to create something intentional, original, and meaningful.
               </p>
               <p className="text-gray-400 mb-8 leading-relaxed">
                 With expertise spanning video production, illustration, graphic design, and web development, we bring
@@ -303,7 +303,7 @@ export default function Home() {
         <div className="container">
           <div className={`mb-16 ${getSectionAnimation("services")}`}>
             <div className="geometric-divider mb-8" />
-            <h2>Our Services</h2>
+            <h2>Services</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -403,9 +403,85 @@ export default function Home() {
 </a>
 
 
+
           </div>
         </div>
+        
       </section>
+    {/* Concepts & Experiments */}
+<section
+  id="concepts"
+  className="section-spacing bg-black border-t border-gray-900"
+>
+  <div className="container">
+    {/* Heading */}
+    <div className="mb-24 max-w-3xl">
+      <div className="mb-6 w-20 h-1 bg-pink-600 rounded-full neon-line" />
+      <h2 className="mb-6">Concepts & Experiments</h2>
+      <p className="text-gray-400 text-lg leading-relaxed">
+        Selected explorations beyond client work. Focused visual
+        experiments that define our creative direction.
+      </p>
+    </div>
+
+    {/* Experiments Grid */}
+    <div className="grid gap-20 md:grid-cols-2">
+      {[
+        {
+          image: "/images/exp1.jpg",
+          tag: "Visual Study",
+          title: "Abstract Motion Language",
+        },
+        {
+          image: "/images/experiments/exp2.jpg",
+          tag: "Brand Identity",
+          title: "Neon Brand DNA",
+        },
+        {
+          image: "/images/experiments/exp3.jpg",
+          tag: "Typography",
+          title: "Raw Type Systems",
+        },
+        {
+          image: "/images/experiments/exp4.jpg",
+          tag: "Interface Design",
+          title: "Dark UI Experiments",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="group relative rounded-3xl overflow-hidden border border-gray-800 hover:border-pink-600 transition-all duration-700"
+        >
+          {/* Image */}
+          <div className="relative h-[460px] overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+          </div>
+
+          {/* Text overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <p className="text-xs uppercase tracking-widest text-pink-500 mb-2">
+              {item.tag}
+            </p>
+            <h3 className="text-2xl font-semibold text-white leading-tight">
+              {item.title}
+            </h3>
+          </div>
+
+          {/* Hover glow */}
+          <div className="absolute inset-0 rounded-3xl ring-1 ring-pink-600/0 group-hover:ring-pink-600/30 transition-all duration-700" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Skills Section */}
       <section
