@@ -39,49 +39,49 @@ export default function Home() {
     {
       id: 1,
       title: "Raven",
-      image: "/images/portfolio-video-editing.jpg",
+      image: "/images/portfolio-video-editing copy.webp",
       description: "Understand brand identity, research competitors, and sketch concepts on paper.",
     },
     {
       id: 2,
       title: "Cranium",
-      image: "/images/portfolio-illustration.jpg",
+      image: "/images/portfolio-illustration copy.webp",
       description: "Hand-crafted visual narratives",
     },
     {
       id: 3,
       title: "Illustrations",
-      image: "/images/portfolio-design.jpg",
+      image: "/images/portfolio-design copy.webp",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
       title: "Posts",
-      image: "/images/portfolio-websites.jpg",
+      image: "/images/portfolio-websites copy.webp",
       description: "Digital experiences that captivate",
     },
      {
       id: 4,
       title: "Thumbnail",
-      image: "/images/LAHORE1.jpg",
+      image: "/images/LAHORE1 copy.webp",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
       title: "Movie Posters",
-      image: "/images/POSTER.jpg",
+      image: "/images/POSTER copy.webp",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
       title: "Poster",
-      image: "/images/SAPAT.jpg",
+      image: "/images/SAPAT copy.webp",
       description: "Bold visual identities and layouts",
     },
     {
       id: 4,
       title: "UX UI",
-      image: "/images/goldbeach.jpg",
+      image: "/images/goldbeach copy.webp",
       description: "Bold visual identities and layouts",
     },
   ];
@@ -191,7 +191,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero-abstract-pink.jpg')",
+            backgroundImage: "url('/images/hero-abstract-pink copy.webp')",
             opacity: 0.3,
           }}
         />
@@ -280,7 +280,7 @@ export default function Home() {
 
 >
  <img
-  src="/images/about.jpg"
+  src="/images/about copy.webp"
   alt="Street Rabbit Studio"
   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
 />
@@ -408,79 +408,9 @@ export default function Home() {
         </div>
         
       </section>
-    {/* Concepts & Experiments */}
-<section
-  id="concepts"
-  className="section-spacing bg-black border-t border-gray-900"
->
-  <div className="container">
-    {/* Heading */}
-    <div className="mb-24 max-w-3xl">
-      <div className="mb-6 w-20 h-1 bg-pink-600 rounded-full neon-line" />
-      <h2 className="mb-6">Concepts & Experiments</h2>
-      <p className="text-gray-400 text-lg leading-relaxed">
-        Selected explorations beyond client work. Focused visual
-        experiments that define our creative direction.
-      </p>
-    </div>
-
-    {/* Experiments Grid */}
-    <div className="grid gap-20 md:grid-cols-2">
-      {[
-        {
-          image: "/images/exp1.jpg",
-          tag: "Visual Study",
-          title: "Abstract Motion Language",
-        },
-        {
-          image: "/images/experiments/exp2.jpg",
-          tag: "Brand Identity",
-          title: "Neon Brand DNA",
-        },
-        {
-          image: "/images/experiments/exp3.jpg",
-          tag: "Typography",
-          title: "Raw Type Systems",
-        },
-        {
-          image: "/images/experiments/exp4.jpg",
-          tag: "Interface Design",
-          title: "Dark UI Experiments",
-        },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="group relative rounded-3xl overflow-hidden border border-gray-800 hover:border-pink-600 transition-all duration-700"
-        >
-          {/* Image */}
-          <div className="relative h-[460px] overflow-hidden">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            />
-
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
-          </div>
-
-          {/* Text overlay */}
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <p className="text-xs uppercase tracking-widest text-pink-500 mb-2">
-              {item.tag}
-            </p>
-            <h3 className="text-2xl font-semibold text-white leading-tight">
-              {item.title}
-            </h3>
-          </div>
-
-          {/* Hover glow */}
-          <div className="absolute inset-0 rounded-3xl ring-1 ring-pink-600/0 group-hover:ring-pink-600/30 transition-all duration-700" />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+   
+   
+ 
 
 
       {/* Skills Section */}
@@ -539,7 +469,7 @@ export default function Home() {
   <div className="container relative z-10">
     {/* Floating Logo */}
 <img
-  src="/images/logobottom1.png"
+  src="/images/logobottom1 copy.webp"
   alt="Street Rabbit"
   className="
     absolute top-35 right-25
